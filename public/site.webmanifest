@@ -1,0 +1,16 @@
+{
+  "name": "Pedigree Studio",
+  "short_name": "Pedigree",
+  "description": "Build clinical family pedigree charts in the browser: partners, children, siblings, twins, cancer history and genetic test results, exported to PNG, SVG or PDF.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fcfdfe",
+  "theme_color": "#fcfdfe",
+  "categories": ["medical", "health", "productivity"],
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
