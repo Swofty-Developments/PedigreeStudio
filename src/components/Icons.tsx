@@ -6,7 +6,7 @@ export function SexIcon({ sex, size = 14, filled = false }: { sex: Sex | "loss" 
   const fill = filled ? "currentColor" : "none";
   return (
     <svg width={s} height={s} viewBox="0 0 16 16" aria-hidden="true" className="sex-icon">
-      {sex === "male" && <rect x="2.2" y="2.2" width="11.6" height="11.6" rx="1.2" fill={fill} stroke="currentColor" strokeWidth={sw} />}
+      {sex === "male" && <rect x="2.2" y="2.2" width="11.6" height="11.6" fill={fill} stroke="currentColor" strokeWidth={sw} />}
       {sex === "female" && <circle cx="8" cy="8" r="6" fill={fill} stroke="currentColor" strokeWidth={sw} />}
       {sex === "unknown" && <path d="M8 1.6L14.4 8L8 14.4L1.6 8Z" fill={fill} stroke="currentColor" strokeWidth={sw} strokeLinejoin="round" />}
       {sex === "loss" && <path d="M8 3L14 13H2Z" fill={fill} stroke="currentColor" strokeWidth={sw} strokeLinejoin="round" />}

@@ -11,8 +11,7 @@ export function shapePath(sex: Sex, loss: boolean, grow = 0): string {
   }
   if (sex === "male") {
     const h = HALF + grow;
-    const r = 2.5 + grow * 0.4;
-    return `M${-h + r},${-h}H${h - r}Q${h},${-h} ${h},${-h + r}V${h - r}Q${h},${h} ${h - r},${h}H${-h + r}Q${-h},${h} ${-h},${h - r}V${-h + r}Q${-h},${-h} ${-h + r},${-h}Z`;
+    return `M${-h},${-h}H${h}V${h}H${-h}Z`;
   }
   if (sex === "female") {
     const r = HALF + grow;
@@ -152,7 +151,7 @@ export function Glyph({ doc, person: p, prefix, showBadges = true }: GlyphProps)
         </g>
       )}
       {presym && <line x1={0} y1={-top} x2={0} y2={bottom} stroke={INK} strokeWidth={2.2} />}
-      <path d={d} fill="none" stroke={INK} strokeWidth={STROKE} strokeLinejoin="round" />
+      <path d={d} fill="none" stroke={INK} strokeWidth={STROKE} strokeLinejoin="miter" />
       {carriers.map((c, i) => {
         const n = carriers.length;
         const cx = (i - (n - 1) / 2) * 11;
@@ -202,7 +201,7 @@ export function Glyph({ doc, person: p, prefix, showBadges = true }: GlyphProps)
           fill="none"
           stroke={INK}
           strokeWidth={STROKE}
-          strokeLinejoin="round"
+          strokeLinejoin="miter"
         />
       )}
       {(p.proband || p.consultand) && (
